@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: apigw
+server:
+  port: 8800
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8999/eureka
+
+zuul:
+  routes:
+   service-a:
+     path: /api/**     
+   service-b:
+     path: /api/**
